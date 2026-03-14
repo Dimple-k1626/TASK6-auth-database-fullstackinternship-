@@ -1,0 +1,139 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+color:white;
+}
+
+/* Animated Gradient Background */
+
+.background{
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(270deg,#6a11cb,#2575fc,#667eea,#764ba2);
+background-size:800% 800%;
+animation:gradientMove 15s ease infinite;
+z-index:-1;
+}
+
+@keyframes gradientMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* Login Card */
+
+.auth-card{
+
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:20px;
+width:340px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+
+}
+
+.auth-card h1{
+
+margin-bottom:10px;
+font-size:28px;
+
+}
+
+.auth-card p{
+
+margin-bottom:20px;
+font-size:16px;
+
+}
+
+/* Inputs */
+
+input{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+outline:none;
+
+}
+
+/* Button Group */
+
+.button-group{
+
+display:flex;
+gap:10px;
+
+}
+
+/* Buttons */
+
+button{
+
+flex:1;
+padding:12px;
+border:none;
+border-radius:8px;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+
+}
+
+/* Register Button */
+
+.register-btn{
+
+background:#28a745;
+
+}
+
+.register-btn:hover{
+
+background:#1e7e34;
+transform:scale(1.05);
+
+}
+
+/* Login Button */
+
+.login-btn{
+
+background:#007bff;
+
+}
+
+.login-btn:hover{
+
+background:#0056b3;
+transform:scale(1.05);
+
+}
+
+/* Result Message */
+
+#result{
+
+margin-top:15px;
+font-weight:bold;
+
+}

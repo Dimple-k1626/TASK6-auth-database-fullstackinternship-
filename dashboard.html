@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Dashboard</title>
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dash-bg"></div>
+
+<div class="dash-container">
+
+<h1>Welcome to Your Dashboard</h1>
+
+<p>You are logged in successfully.</p>
+
+<button class="logout-btn" onclick="logout()">Logout</button>
+
+</div>
+
+<script>
+
+const token = localStorage.getItem("token");
+
+if(!token){
+
+alert("Please login first");
+window.location.href="index.html";
+
+}
+
+function logout(){
+
+localStorage.removeItem("token");
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
